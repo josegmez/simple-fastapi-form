@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UdeA - On Premise Server</title>
+  <link rel="stylesheet" href="static/styles/page.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>UdeA - On Premise Server</h1>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Gestión de Incidencias</h1>
+    <form id="incident-form">
+      <input type="hidden" id="incident-id">
+      <label for="title">Título:</label>
+      <input type="text" id="title" required>
+
+      <label for="description">Descripción:</label>
+      <textarea id="description" required></textarea>
+
+      <label for="severity">Gravedad:</label>
+      <select id="severity" required>
+        <option value="low">Baja</option>
+        <option value="medium">Media</option>
+        <option value="high">Alta</option>
+      </select>
+
+      <label for="assigned_to">Asignado a:</label>
+      <input type="text" id="assigned_to" required>
+
+      <button type="submit">Crear Incidencia</button>
+      <button type="submit" id="update-btn" style="display:none; margin-top: 1rem ">Actualizar Incidencia</button>
+    </form>
+
+    <h2>Incidencias</h2>
+    <ul id="incident-list">
+      <li>
+        Cargando...
+      </li>
+    </ul>
+  </main>
+
+  <script src="/static/scripts/app.js"></script>
+</body>
+
+</html>
